@@ -10,6 +10,10 @@ const users_routes = require("./routes/users");
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Hi, i m live");
+});
+
 app.use("/api/users", users_routes);
 
 const start = async () => {
